@@ -24,7 +24,7 @@ ul {
   position:relative;
   width: 436px;
   height: 327px;
-  background: url("/images/Background.png") no-repeat top left;
+  background: url("/asis/asis/images/Background.png") no-repeat top left;
   text-align: center;
   margin-bottom: 5px;
   img {
@@ -87,7 +87,7 @@ ul {
 
 #next {
   width: 25px;
-  background: url("/images/buttons.png") no-repeat -26px 0;
+  background: url("/asis/images/buttons.png") no-repeat -26px 0;
   top: 0;
   right: 2px; }
 
@@ -96,29 +96,29 @@ ul {
 
 #next {
   &:active {
-    background: url("/images/buttons.png") no-repeat -78px 0; }
+    background: url("/asis/images/buttons.png") no-repeat -78px 0; }
   &:hover {
-    background: url("/images/buttons.png") no-repeat -52px 0; } }
+    background: url("/asis/images/buttons.png") no-repeat -52px 0; } }
 
 #prev {
   top: 0;
   padding-left: 2px;
   left: -2px;
-  background: url("/images/buttons.png") no-repeat -104px 0;
+  background: url("/asis/images/buttons.png") no-repeat -104px 0;
   &:active {
-    background: url("/images/buttons.png") no-repeat -130px 0; }
+    background: url("/asis/images/buttons.png") no-repeat -130px 0; }
   &:hover {
-    background: url("/images/buttons.png") no-repeat 0 0; } }
+    background: url("/asis/images/buttons.png") no-repeat 0 0; } }
 
 .disabled {
   opacity: 0.3;
   cursor: no-drop; }
 
 #next.disabled:hover {
-  background: url("/images/buttons.png") no-repeat -26px 0; }
+  background: url("/asis/images/buttons.png") no-repeat -26px 0; }
 
 #prev.disabled:hover {
-  background: url("/images/buttons.png") no-repeat -104px 0; }
+  background: url("/asis/images/buttons.png") no-repeat -104px 0; }
 
 #footer {
   background: #2c2c2c;

@@ -27,6 +27,10 @@ asis
 ```
 to serve up the current directory
 
+## Notes
+ All Asis assets are served up under the /asis/ url, if have this as a subfolder name you may experience image collisions
+
+
 ## Todo
 
 - Better image scaling

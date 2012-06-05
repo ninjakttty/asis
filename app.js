@@ -65,7 +65,6 @@ app.get(/\.(png|jpg|jpeg|gif)$/, function(req, res){
   });
 });
 
-
 app.get('/*', function(req, res){
   var url = req.url;
   var fileList = files;
@@ -77,6 +76,9 @@ app.get('/*', function(req, res){
   });
   fileList = _.compact(fileList); 
 
+  if(fileList.length === 0){
+    fileList = ['/asis/images/no_images.png']
+  }
   var data = {
     dirs: dirs,
     files: fileList

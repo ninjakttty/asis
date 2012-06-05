@@ -30,7 +30,7 @@ ul#files li {
   position: relative;
   width: 436px;
   height: 327px;
-  background: url("/images/Background.png") no-repeat top left;
+  background: url("/asis/asis/images/Background.png") no-repeat top left;
   text-align: center;
   margin-bottom: 5px;
 }
@@ -106,7 +106,7 @@ ul#files li {
 
 #next {
   width: 25px;
-  background: url("/images/buttons.png") no-repeat -26px 0;
+  background: url("/asis/images/buttons.png") no-repeat -26px 0;
   top: 0;
   right: 2px;
 }
@@ -116,23 +116,23 @@ ul#files li {
 }
 
 #next:active {
-  background: url("/images/buttons.png") no-repeat -78px 0;
+  background: url("/asis/images/buttons.png") no-repeat -78px 0;
 }
 #next:hover {
-  background: url("/images/buttons.png") no-repeat -52px 0;
+  background: url("/asis/images/buttons.png") no-repeat -52px 0;
 }
 
 #prev {
   top: 0;
   padding-left: 2px;
   left: -2px;
-  background: url("/images/buttons.png") no-repeat -104px 0;
+  background: url("/asis/images/buttons.png") no-repeat -104px 0;
 }
 #prev:active {
-  background: url("/images/buttons.png") no-repeat -130px 0;
+  background: url("/asis/images/buttons.png") no-repeat -130px 0;
 }
 #prev:hover {
-  background: url("/images/buttons.png") no-repeat 0 0;
+  background: url("/asis/images/buttons.png") no-repeat 0 0;
 }
 
 .disabled {
@@ -141,11 +141,11 @@ ul#files li {
 }
 
 #next.disabled:hover {
-  background: url("/images/buttons.png") no-repeat -26px 0;
+  background: url("/asis/images/buttons.png") no-repeat -26px 0;
 }
 
 #prev.disabled:hover {
-  background: url("/images/buttons.png") no-repeat -104px 0;
+  background: url("/asis/images/buttons.png") no-repeat -104px 0;
 }
 
 #footer {
