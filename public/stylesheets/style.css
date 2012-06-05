@@ -27,6 +27,7 @@ ul#files li {
 }
 
 #viewer {
+  position: relative;
   width: 436px;
   height: 327px;
   background: url("/images/Background.png") no-repeat top left;
@@ -41,6 +42,13 @@ ul#files li {
 }
 #viewer.landscape img {
   margin: 22px auto 0 auto;
+}
+#viewer #directlink {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-decoration: none;
 }
 
 #parent {
@@ -161,13 +169,15 @@ ul#files li {
 }
 
 #dir {
-  margin-left: 0px;
-  background: #eee;
+  padding: 3px 0 0 7px;
+  position: absolute;
+  bottom: 0;
 }
-#dir li {
+#dir ul li {
   display: inline-block;
   margin-left: 10px;
 }
-#dir li a {
+#dir ul li a {
   text-decoration: none;
+  color: #3D3D3D;
 }

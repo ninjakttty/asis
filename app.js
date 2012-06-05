@@ -52,7 +52,7 @@ function isImage(name){
   return type[name.split('.').pop().toLowerCase()] ? true : false;
 }
 
-app.get(/(jpg|png|gif)/, function(req, res){
+app.get(/\.(png|jpg|jpeg|gif)$/, function(req, res){
   _.each(files, function(file){
     if(encodeURI(file).match(req.url)){
       try{

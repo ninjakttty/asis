@@ -21,6 +21,7 @@ ul {
   margin: 15px auto; }
 
 #viewer {
+  position:relative;
   width: 436px;
   height: 327px;
   background: url("/images/Background.png") no-repeat top left;
@@ -31,7 +32,14 @@ ul {
   &.portrait img {
     margin: 8px auto 0 auto; }
   &.landscape img {
-    margin: 22px auto 0 auto; } }
+    margin: 22px auto 0 auto; } 
+  #directlink{ 
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    text-decoration:none;
+  }}
 
 #parent {
   overflow: hidden;
@@ -130,9 +138,13 @@ ul {
     margin: 0 auto; } }
 
 #dir {
-  margin-left: 0px;
-  background: #eee;
-  li {
-    display: inline-block;
-    margin-left: 10px; 
-    a{ text-decoration: none;} } }
+  padding: 3px 0 0 7px;
+  position:absolute;
+  bottom:0;
+  ul{
+    
+    li {
+      display: inline-block;
+      margin-left: 10px; 
+      a{ text-decoration: none;
+        color: #3D3D3D;} } } }
