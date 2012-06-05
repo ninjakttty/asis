@@ -1,0 +1,18 @@
+#container
+  #viewer.landscape
+    img(src="#{files[0]}", alt='img1', width='420', height='281')
+    a#directlink(href="#{files[0]}") Direct Link
+  #filmstrip
+    span#prev.arrow.disabled
+    span#next.arrow
+    #parent
+      ul
+        each item, i in files
+          - var klass = ( i === 0) ? 'first selected' : '';
+          li(class="#{klass}")
+            img(src="#{item}", alt="thumbnail", height='37', data-img='{"width": "420", "height":"281", "src": "#{item}"}')
+p directories
+ul#dir
+  each item in dirs
+    li
+      a(href="#{item}")= item
