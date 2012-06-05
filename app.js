@@ -48,8 +48,6 @@ walker.on("file", function (root, fileStats, next) {
   next();
 });
 
-
-
 function isImage(name){
   return type[name.split('.').pop().toLowerCase()] ? true : false;
 }
@@ -87,6 +85,6 @@ app.get('/*', function(req, res){
 });
 
 
-app.listen(4512, function(){
+app.listen(3000, function(){
   console.log("Asis server listening on port %d", app.address().port);
 });
