@@ -1,13 +1,13 @@
-var express = require('express'),
-fs = require('fs'),
-_ = require('underscore'),
-path= require('path')
-walk = require('walk'),
-fs = require('fs');
+var express  = require('express'),
+        fs   = require('fs'),
+        _    = require('underscore'),
+        path = require('path'),
+        walk = require('walk'),
+        fs   = require('fs');
 
 var publicPath = path.resolve(process.argv[2]||'.');
 
-console.log("Watching: ", publicPath)
+console.log("Watching: ", publicPath);
 
 var app = module.exports = express.createServer();
 
@@ -18,7 +18,7 @@ app.configure(function(){
   app.set('view engine', 'jade');
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.favicon())
+  app.use(express.favicon());
   app.use(express.static(__dirname + '/public'));
   app.use(app.router);
 
@@ -31,19 +31,19 @@ var   type = {
 };
 
 var dirs = ['/'],
-files = []
+files = [];
 
 walker = walk.walk(publicPath);
 
 walker.on("directory", function (root, dirStatsArray, next) {
-  dirs.push('/' +dirStatsArray.name)
+  dirs.push('/' +dirStatsArray.name);
   next();
 });
 
 walker.on("file", function (root, fileStats, next) {
   var fileName = root.split(publicPath)[1] + "/" +fileStats.name;
   if(isImage(fileName)){
-    files.push(fileName)
+    files.push(fileName);
   } 
   next();
 });
@@ -56,10 +56,10 @@ app.get(/\.(png|jpg|jpeg|gif)$/, function(req, res){
   _.each(files, function(file){
     if(encodeURI(file).match(req.url)){
       try{
-        var img = fs.readFileSync(publicPath +  file);
+        var img = fs.readFileSync(publicPath +  file);   
         res.end(img, 'binary'); 
       }catch(e){
-        console.log(e)
+        console.log(e);
       }
     }
   });
@@ -71,19 +71,19 @@ app.get('/*', function(req, res){
 
   fileList = _.map(files, function(file){
     if(encodeURI(file).match(req.url) ){
-      return file
+      return file;
     }
   });
   fileList = _.compact(fileList); 
 
   if(fileList.length === 0){
-    fileList = ['/asis/images/no_images.png']
+    fileList = ['/asis/images/no_images.png'];
   }
   var data = {
     dirs: dirs,
     files: fileList
-  }
-  res.render('index', data)
+  };
+  res.render('index', data);
 });
 
 
