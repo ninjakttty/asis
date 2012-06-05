@@ -1,7 +1,13 @@
 {
+  "author": "Yuri A. Parsons <yuri@ninjakitty.net> (ninjakitty.net)",
   "name": "asis",
+  "description": "A Simple Image Server",
   "version": "0.0.1",
-  "private": true,
+  "homepage": "https://github.com/ninjakttty/asis",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ninjakttty/asis.git"
+  },
   "bin": {
       "asis": "./bin/asis.js"
     },
@@ -15,7 +21,5 @@
   "optionalDependencies": {},
   "engines": {
     "node": "*"
-  },
-  "author": "Yuri A. Parsons <yuri@ninjakitty.net> (ninjakitty.net)",
-  "description": "A Simple Image Server"
+  }
 }
