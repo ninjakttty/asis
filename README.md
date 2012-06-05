@@ -16,11 +16,16 @@ A simple image server and asset server.
 
 ## Using
 
-To serve images simply go into a folder from the command line and type 
+To serve images simply type
 ``` 
-asis
+asis ~/image_folder
 ```
+or type 
 
+``` 
+asis 
+```
+to serve up the current directory
 
 ## Todo
 

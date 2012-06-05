@@ -1,2 +1,2 @@
-#!/usr/bin/env node --debug
+#!/usr/bin/env node
 require(__dirname+'/../app.js')

@@ -5,7 +5,6 @@ path= require('path')
 walk = require('walk'),
 fs = require('fs');
 
-
 var publicPath = path.resolve(process.argv[2]||'.');
 
 console.log("Watching: ", publicPath)
@@ -37,7 +36,6 @@ files = []
 walker = walk.walk(publicPath);
 
 walker.on("directory", function (root, dirStatsArray, next) {
-  console.log(root + '/' + dirStatsArray.name);
   dirs.push('/' +dirStatsArray.name)
   next();
 });
@@ -46,7 +44,6 @@ walker.on("file", function (root, fileStats, next) {
   var fileName = root.split(publicPath)[1] + "/" +fileStats.name;
   if(isImage(fileName)){
     files.push(fileName)
-    console.log("FILE:", encodeURI( fileName ) )
   } 
   next();
 });
@@ -76,9 +73,7 @@ app.get('/*', function(req, res){
   var fileList = files;
 
   fileList = _.map(files, function(file){
-
     if(encodeURI(file).match(req.url) ){
-      console.log("File", file, file.split('/').length, req.url.split('/').length)
       return file
     }
   });
@@ -92,6 +87,6 @@ app.get('/*', function(req, res){
 });
 
 
-app.listen(3000, function(){
+app.listen(4512, function(){
   console.log("Asis server listening on port %d", app.address().port);
 });
