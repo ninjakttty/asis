@@ -2,7 +2,7 @@
   "author": "Yuri A. Parsons <yuri@ninjakitty.net> (ninjakitty.net)",
   "name": "asis",
   "description": "A Simple Image Server",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "homepage": "https://github.com/ninjakttty/asis",
   "repository": {
     "type": "git",
