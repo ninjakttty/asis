@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/ninjakttty/asis.png)](http://travis-ci.org/ninjakttty/asis)
 # Asis Image Server.
 
 A simple image server and asset server. 
